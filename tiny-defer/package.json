@@ -1,0 +1,30 @@
+{
+  "name": "tiny-defer-js",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zz-zhangzhao/tiny-deferred.git"
+  },
+  "keywords": [
+    "deferred",
+    "promise"
+  ],
+  "author": "zz-zhangzhao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zz-zhangzhao/tiny-deferred/issues"
+  },
+  "homepage": "https://github.com/zz-zhangzhao/tiny-deferred#readme",
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0"
+  }
+}
