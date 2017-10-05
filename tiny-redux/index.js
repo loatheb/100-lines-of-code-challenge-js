@@ -1,21 +1,21 @@
-const createStore = (reducer) => {
-  let state
-  let listener
+var createStore = function (reducer) {
+  var state
+  var listener
 
-  const getState = () => {
+  var getState = function () {
     return state
   }
 
-  const dispatch = (action) => {
+  var dispatch = function (action) {
     state = reducer(state, action)
     if (listener && typeof listener === 'function') {
       return listener()
     }
   }
 
-  const subscribe = (cb) => {
+  var subscribe = function (cb) {
     listener = cb
-    return () => {
+    return function unsubscribe() {
       listener = null
     }
   }
@@ -28,3 +28,5 @@ const createStore = (reducer) => {
     getState
   }
 }
+
+module.exports = createStore.createStore = createStore['default'] = createStore
