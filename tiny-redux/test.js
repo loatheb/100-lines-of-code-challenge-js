@@ -1,5 +1,5 @@
-// const { createStore } = require('./index')
-const { createStore } = require('./index-enhance')
+const { createStore } = require('./index')
+// const { createStore } = require('./index-enhance')
 
 const INIT_STATE = 0
 
