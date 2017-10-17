@@ -1,4 +1,4 @@
-const Callbacks = (flags) => {
+const Callbacks = (flags = '') => {
   const flagsList = flags.split(' ')
   let fired
   class Callbacks {
@@ -24,6 +24,7 @@ const Callbacks = (flags) => {
           return !this.stopOnFalse || !status
         })
       }
+      return this
     }
     fire(...args) {
       if (this.once && fired) return this
@@ -39,3 +40,5 @@ const Callbacks = (flags) => {
 
   return new Callbacks()
 }
+
+module.exports = Callbacks
