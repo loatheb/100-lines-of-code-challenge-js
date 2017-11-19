@@ -12,7 +12,8 @@ function memoize(func) {
   }
 }
 
-export default function(...funcs, result) {
+export default function(...funcs) {
+  const result = funcs.pop()
   let recomputations = 0
   const memoizedFunc = memoize(function() {
     recomputations++
