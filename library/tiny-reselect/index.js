@@ -3,16 +3,15 @@ function memoize(func) {
   let prevResult = null
 
   return function() {
-    if (!prevArgs.every((item, index) => item === next[index])) {
+    if (!prevArgs || !prevArgs.every((item, index) => item === arguments[index])) {
       prevResult = func.apply(func, arguments)
-      prevArgs = arguments
+      prevArgs = [...arguments]
     }
-
     return prevResult
   }
 }
 
-export default function(...funcs) {
+module.exports = function(...funcs) {
   const result = funcs.pop()
   let recomputations = 0
   const memoizedFunc = memoize(function() {
@@ -25,6 +24,5 @@ export default function(...funcs) {
     return memoizedFunc.apply(null, params)
   })
   selector.recomputations = () => recomputations
-
   return selector
 }
