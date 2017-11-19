@@ -30,7 +30,9 @@
         }
         Deferred.prototype.then = function (resolve, reject) {
             successCallbacks.add(resolve);
-            failCallbacks.add(reject);
+            if (reject) {
+                failCallbacks.add(reject);
+            }
             return this;
         }
         Deferred.prototype.reject = function (errMsg) {
