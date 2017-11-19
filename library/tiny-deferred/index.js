@@ -63,6 +63,23 @@
         }
         return dfd;
     }
+    Deferred.race = function() {
+        var length = arguments.length;
+        var finished = false;
+        var result = null;
+        var dfd = new Deferred();
+
+        var cb = function(result) {
+            if (!finished) {
+                finished = true;
+                dfd.resolve(result);
+            }
+        }
+        for (var i = 0; i < length; i++) {
+            arguments[i].done(cb)
+        }
+        return dfd;
+    }
 
     if(typeof exports === 'object') {
         module.exports = Deferred;
