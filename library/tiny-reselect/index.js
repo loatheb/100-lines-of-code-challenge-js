@@ -23,6 +23,14 @@ module.exports = function(...funcs) {
     const params = funcs.map(fun => fun.apply(fun, arguments))
     return memoizedFunc.apply(null, params)
   })
-  selector.recomputations = () => recomputations
+
+  Object.defineProperty(selector, 'recomputations', {
+    get() {
+      return recomputations
+    },
+    set() {
+      throw new Error('[tiny-reselect]: cannot set recomputations directly!')
+    }
+  })
   return selector
 }
