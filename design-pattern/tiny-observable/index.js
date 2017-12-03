@@ -9,7 +9,7 @@ const Event = {
     return () => {
       this.store[key].filter(cb => cb !== fn)
     }
-  }
+  },
   trigger(key, ...args) {
     if (!this.store[key]) return
     this.store[key].forEach(fn => fn.apply(this, args))
