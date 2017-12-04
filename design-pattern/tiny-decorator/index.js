@@ -1,14 +1,14 @@
-const before = (fn ,func) => {
+const before = (fn ,...funcs) => {
   return () => {
-    func.apply(this, arguments)
+    funcs.forEach(func => func.apply(this, arguments))
     fn.apply(this, arguments)
   }
 }
 
-const after = function (fn, func) {
+const after = function (fn, ...funcs) {
   return () => {
     fn.apply(this, arguments)
-    func.apply(this, arguments)
+    funcs.forEach(func => func.apply(this, arguments))
   }
 }
 
