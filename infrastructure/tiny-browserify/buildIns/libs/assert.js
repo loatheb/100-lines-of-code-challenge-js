@@ -1,4 +1,7 @@
-var inherites = require('./util').inherites
+var util = require('./util')
+var inherites = util.inherites
+var keys = util.keys
+var isObject = util.isObject
 
 function toString(value) {
   if (typeof value === 'object') {
@@ -8,7 +11,10 @@ function toString(value) {
 }
 
 function travel(obj1, obj2, method) {
+  if (keys(obj1) !== keys(obj2)) return false
   for (var i in obj1) {
+    if (!obj2.hasOwnproperty(i)) return false
+    if (isObject(obj1[i])) return travel(obj1[i], obj2[i], method)
     try {
       method(obj1[i], obj2[i])
     } catch(e) {
@@ -104,20 +110,48 @@ function notStrictEqual(actual, expected, message) {
   }
 }
 
-function throws() {
+function throws(func, error, message) {
+  var result
+  var reg = new RegExp(error)
+  try {
+    result = func()
+  } catch(e) {
+    result = e
+  }
 
+  if (!reg.test(error)) return
+  if (message) throw message
+  throw result
 }
 
 function doesNotThrow() {
+  var result
+  var reg = new RegExp(error)
+  try {
+    result = func()
+  } catch(e) {
+    result = e
+  }
 
+  if (reg.test(error)) return
+  if (message) throw message
+  throw result
 }
 
-function ifError() {
-
+function ifError(value) {
+  if (!value) {
+    throw value
+  }
 }
 
-function fail() {
-
+function fail(actual, expected, message, operator, stackStartFunction) {
+  operator = operator || '!='
+  stackStartFunction = stackStartFunction || fail
+  var params = toString(actual) + ' ' + operator + ' ' + toString(expected)
+  var result = new Function(params)
+  if (result) return
+  if (message) throw message
+  throw params
 }
 
 var assert = function() {
