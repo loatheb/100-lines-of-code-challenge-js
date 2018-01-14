@@ -1,14 +1,14 @@
 const wrapper = [
-  `return '{'`,
-  `}`,
+  `return '{`,
+  `}'`,
 ]
 
-function toString(value, type) {
+function toString(key, type) {
   if (type === 'string') {
-    return `'obj.${value}'`
+    return `"obj.${key}"`
   }
   if (type === 'integer') {
-    return `obj.${value}`
+    return `"obj['${key}']"`
   }
 }
 
@@ -17,11 +17,13 @@ function stringify(schema, obj) {
 
   const tuples = keys.map(key => {
     const type = schema[key]
-    const value = obj[key]
-    return `'${key}': ${toString(value, type)}`
+    return `"${key}":${toString(key, type)}`
   })
 
-  return new Function('obj', `
-    ${wrapper[0]}${tuples.join(', ')}${wrapper[1]}
+  const genFn = new Function('obj', `
+    ${wrapper[0]} + ${tuples.join(' + "," + ')} +  ${wrapper[1]}
   `)
+  return genFn(obj)
 }
+
+module.exports = stringify
