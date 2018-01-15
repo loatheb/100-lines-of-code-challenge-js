@@ -1,6 +1,5 @@
-# Tiny All Over The World
-<p align="center">
-<img width="200" height="200" src="https://github.com/loatheb/tiny-all-over-the-world/blob/master/assets/icon.png"></img>
-<img width="200" height="200" src="https://github.com/loatheb/tiny-all-over-the-world/blob/master/assets/avatar.JPG"></img>
-</p>
+<a href="https://zhangzhao.name">
+	<img align="right" width="200" height="200" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/7cdfac31/assets/avatar.JPG" />
+</a>
 
+# Tiny All Over The World
