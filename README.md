@@ -3,3 +3,4 @@
 </a>
 
 # Tiny All Over The World
+It's goal is to achieve a simple and tiny version of many of the front-end frameworks and libraries, and in the implementation process, understand the core principles of the libraries.
