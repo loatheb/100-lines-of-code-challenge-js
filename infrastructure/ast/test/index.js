@@ -20,8 +20,8 @@ const ESTREE_AST = {
       id: {
         type: 'Identifier',
         name: 'foo'
-      }
-      }],
+      },
+    }],
     kind: 'const'
   }],
   sourceType: 'script'
