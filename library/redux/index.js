@@ -1,5 +1,4 @@
-var createStore = require('./createStore')
-
 module.exports = {
-  createStore: createStore
+  createStore: require('./createStore'),
+  bindActionCreator: require('./bindActionCreators'),
 }
