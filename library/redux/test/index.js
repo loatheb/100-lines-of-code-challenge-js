@@ -43,4 +43,9 @@ store1.dispatch({ type: 'INCREATEMENT' })
 assert.equal(times, 3)
 assert.equal(store1.getState(), 2)
 
+const mapedDispatchFunc = bindActionCreator(() => ({ type: 'INCREATEMENT' }), store1.dispatch)
+mapedDispatchFunc()
+
+assert.equal(store1.getState(), 3)
+
 console.log('all test passed')
