@@ -4,7 +4,7 @@ const {
   createFallbackRouter,
 } = require('./factories')
 
-function isFunction(fn) { return typeof fn === 'function' }
+const { isFunction } = require('./factories/utils')
 
 module.exports = function bootstrap() {
   if (history && isFunction(history.pushState) && isFunction(history.replaceState)) {
