@@ -1,6 +1,6 @@
 ```html
-<link target="/a">Go to A</link>
-<link target="/b">Go to B</link>
+<a target="/a">Go to A</a>
+<a target="/b">Go to B</a>
 ```
 
 ```js
