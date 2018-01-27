@@ -21,7 +21,7 @@ const case2 = `
     <% if (user) { %>
       <h2><%= user.name %></h2>
     <% } %>
-  <% }) %>
+  <% }); %>
 </ul>
 `
 
