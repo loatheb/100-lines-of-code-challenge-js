@@ -1,6 +1,7 @@
-module.exports = function(name) {
+module.exports = function debug(name) {
   const predicate = process.env.DEBUG === name
-  return function() {
-    if (predicate) return console.log.apply(console, arguments)
+  return function debugHelper(...args) {
+    if (predicate) return console.log(args)
+    return false
   }
 }

@@ -1,4 +1,4 @@
-const { 
+const {
   createModernRouter,
   createNormalRouter,
   createFallbackRouter,
@@ -7,7 +7,7 @@ const {
 const { isFunction } = require('./factories/utils')
 
 module.exports = function bootstrap() {
-  if (history && isFunction(history.pushState) && isFunction(history.replaceState)) {
+  if (window.history && isFunction(window.history.pushState) && isFunction(window.history.replaceState)) {
     return createModernRouter()
   }
   if (isFunction(window.onhashchange)) {

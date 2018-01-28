@@ -2,19 +2,21 @@ const { isFunction } = require('./utils')
 
 module.exports = function router(map) {
   const links = [...document.getElementsByTagName('a')]
-  const currentRoute = location.pathname
-  const method = map[currentRoute]
+  const defaultRoute = window.location.pathname
+  const defaultMethod = map[defaultRoute]
 
-  if (method && isFunction(method)) {
-    method()
+  if (defaultMethod && isFunction(defaultMethod)) {
+    defaultMethod()
   }
 
-  links.forEach(link => {
+  /* eslint no-param-reassign: [2, { "props": false }] */
+  links.forEach((link) => {
     const target = link.getAttribute('target')
-    link.onclick = function() {
+    link.onclick = function handler() {
       const method = map[target]
-      history.pushState({}, target, target)
+      window.history.pushState({}, target, target)
       if (method && isFunction(method)) return method()
+      return false
     }
   })
 }

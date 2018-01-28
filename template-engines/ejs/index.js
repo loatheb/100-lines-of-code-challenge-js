@@ -3,16 +3,20 @@ function parse(str) {
     var buf = [];
     with(data) {
       buf.push('${
-        str
-          .replace(/[\r\t\n]/g, " ")
-          .split("<%").join("\t")
-          .replace(/((^|%>)[^\t]*)'/g, "$1\r")
-          .split("'").join("\\'")
-          .replace(/\t=(.*?)%>/g, "',$1,'")
-          .split("\t").join("');")
-          .split("%>").join("buf.push('")
-          .split("\r").join("\\'")
-      }');
+  str
+    .replace(/[\r\t\n]/g, ' ')
+    .split('<%').join('\t')
+    .replace(/((^|%>)[^\t]*)'/g, '$1\r')
+    .split("'")
+    .join("\\'")
+    .replace(/\t=(.*?)%>/g, "',$1,'")
+    .split('\t')
+    .join("');")
+    .split('%>')
+    .join("buf.push('")
+    .split('\r')
+    .join("\\'")
+}');
     };
     return buf.join('');
   `

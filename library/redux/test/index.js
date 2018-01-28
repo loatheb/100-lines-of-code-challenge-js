@@ -5,7 +5,7 @@ const INIT_STATE = 0
 let times = 0
 
 const reducer = (state = INIT_STATE, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'INCREATEMENT': {
       return state + 1
     }
@@ -22,10 +22,10 @@ const store1 = createStore(reducer)
 const store2 = createStore(reducer)
 
 const unsubscribe1 = store1.subscribe(() => {
-  times++
+  times += 1
 })
 const unsubscribe2 = store2.subscribe(() => {
-  times++
+  times += 1
 })
 
 store1.dispatch({ type: 'INCREATEMENT' })

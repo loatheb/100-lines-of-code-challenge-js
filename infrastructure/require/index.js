@@ -10,12 +10,12 @@ const m = {
 }
 const r = file => global.require(file)
 
-module.exports = function(filename, runInThisContext = false) {
+module.exports = function require(filename, runInThisContext = false) {
   const code = readFileSync(resolve(process.cwd(), filename), 'utf-8')
   const wrapper = wrap(code)
   const script = new vm.Script(wrapper, {
     filename,
-    displayErrors: true
+    displayErrors: true,
   })
 
   const compiledWrapper = runInThisContext
@@ -25,7 +25,7 @@ module.exports = function(filename, runInThisContext = false) {
   compiledWrapper.call(m.exports, m.exports, r, m)
 
   const res = Object.prototype.hasOwnProperty.call(m.exports, 'default')
-      ? m.exports.default
-      : m.exports
+    ? m.exports.default
+    : m.exports
   return res
 }

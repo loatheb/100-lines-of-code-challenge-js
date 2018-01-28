@@ -1,6 +1,6 @@
 const wrapper = [
   '(function (exports, require, module) { ',
-  '\n});'
+  '\n});',
 ]
 
 module.exports = function wrap(script) {
