@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "author": "zhao.zhang <loatheb.zhao@gmail.com>",
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint": "eslint *.js **/*.js"
+  },
+  "license": "LGPL-3.0",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
