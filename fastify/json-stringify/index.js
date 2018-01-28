@@ -10,12 +10,13 @@ function toString(key, type) {
   if (type === 'integer') {
     return `\${obj.${key}}`
   }
+  return `${key}`
 }
 
 function stringify(schema, obj) {
   const keys = Object.keys(obj)
 
-  const tuples = keys.map(key => {
+  const tuples = keys.map((key) => {
     const type = schema[key]
     return `"${key}":${toString(key, type)}`
   })

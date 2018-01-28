@@ -1,16 +1,16 @@
 const { isFunction } = require('./utils')
 
-module.exports = function(map) {
-  const currentRoute = location.pathname
-  window['@@router@@'] = currentRoute
-  const method = map[currentRoute]
+module.exports = function fallbackRouter(map) {
+  const defaultRoute = window.location.pathname
+  window['@@router@@'] = defaultRoute
+  const defaultMethod = map[defaultRoute]
 
-  if (method && isFunction(method)) {
-    method()
+  if (defaultMethod && isFunction(defaultMethod)) {
+    defaultMethod()
   }
-  
-  setInterval(function() {
-    const currentRoute = location.pathname
+
+  setInterval(() => {
+    const currentRoute = window.location.pathname
     if (currentRoute !== window['@@router@@']) {
       const method = map[currentRoute]
       if (method && typeof method === 'function') {
@@ -18,5 +18,6 @@ module.exports = function(map) {
         return method()
       }
     }
+    return false
   })
 }

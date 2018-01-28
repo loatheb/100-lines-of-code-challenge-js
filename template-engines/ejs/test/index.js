@@ -1,7 +1,7 @@
 const assert = require('assert')
 const tejs = require('..')
 
-function format(str) { return str.replace(/[\n\s]/g, '') }
+function format(str) { return str.replace(/[\r\t\n\s]/g, '') }
 
 const case1 = `
 <% if (user) { %>
@@ -29,7 +29,7 @@ const result2 = tejs.render(case2, {
   users: [
     { name: 'zhao.zhang' },
     { name: 'lingli.chen' },
-  ]
+  ],
 })
 
 assert.equal(format(result2), '<ul><h2>zhao.zhang</h2><h2>lingli.chen</h2></ul>')

@@ -16,9 +16,9 @@ class State {
   }
   set(prop, value) {
     if (!this.modified) {
-        if (prop in this.base && Object.is(this.base[prop], value)) return
+      if (prop in this.base && Object.is(this.base[prop], value)) return
 
-        this.markChanged()
+      this.markChanged()
     }
 
     this.copy[prop] = value
@@ -44,26 +44,28 @@ const handler = {
 }
 
 function finalize(value) {
-  if (typeof value !== null && typeof value === "object") {
+  if (value !== null && typeof value === 'object') {
     const proto = Object.getPrototypeOf(value)
     if (proto === null || proto === Object.prototype) {
-      for (let key in value) value[key] = finalize(value[key])
-      return value
+      return Object.keys(value).reduce((memo, current) => ({
+        ...memo,
+        current: finalize(value[current]),
+      }), {})
     }
   }
 
   if (!!value && !!value[PROXY_STATE]) {
     const state = value[PROXY_STATE]
     if (state.modified === true) {
-        if (state.finalized === true) return state.copy
+      if (state.finalized === true) return state.copy
 
-        state.finalized = true
-        const copy = state.copy
-        const base = state.base
-        for (let prop in copy) {
-          if (copy[prop] !== base[prop]) copy[prop] = finalize(copy[prop])
-        }
-        return copy
+      state.finalized = true
+      const { copy } = state
+      const { base } = state
+      Object.keys(copy).forEach((prop) => {
+        if (copy[prop] !== base[prop]) copy[prop] = finalize(copy[prop])
+      })
+      return copy
     }
     return state.base
   }
@@ -71,7 +73,7 @@ function finalize(value) {
   return value
 }
 
-const produce = function(baseState, producer) {
+function produce(baseState, producer) {
   const state = new State(baseState)
   const { proxy, revoke } = Proxy.revocable(state, handler)
 
