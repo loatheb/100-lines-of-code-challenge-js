@@ -19,15 +19,15 @@ Support me once like a cup of coffee.
 * Common Currency
 
 <div style="display: flex;justify-content:space-between;">
-	<img width="300" height="300" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/cn/alipay.png" />
-	<img width="300" height="300" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/cn/wechat.png" />
-	<img width="300" height="300" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/cn/paypal.png" />
+	<img width="250" height="250" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/cn/alipay.png" />
+	<img width="250" height="250" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/cn/wechat.png" />
+	<img width="250" height="250" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/cn/paypal.png" />
 </div>
 
 * Digital Currency
 
 <div style="display: flex;justify-content:space-between;">
-	<img width="300" height="300" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/BTC.png" />
-	<img width="300" height="300" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/ETH.png" />
-	<img width="300" height="300" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/EOS.png" />
+	<img width="250" height="250" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/BTC.png" />
+	<img width="250" height="250" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/ETH.png" />
+	<img width="250" height="250" src="https://cdn.rawgit.com/loatheb/tiny-all-over-the-world/d5c9d689/assets/EOS.png" />
 </div>
