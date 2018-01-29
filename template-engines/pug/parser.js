@@ -15,13 +15,13 @@ module.exports = class Parser {
     }
   }
 
+  /* eslint no-cond-assign: 0 */
   get nextToken() {
     return tuples.some(([reg, type]) => {
-      if (reg.test(this.source)) {
+      if (this.capture = reg.exec(this.source)) {
         if (type === 'indent') {
           this.currentLine += 1
         }
-        this.capture = reg.exec(this.source)
         const token = this.generateToken(type)
         return this.ast.push(token)
       }
