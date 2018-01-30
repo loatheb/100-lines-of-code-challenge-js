@@ -1,37 +1,50 @@
-const assert = require('assert')
-const tejs = require('..')
+const { render, parse, compile } = require('..')
 
-function format(str) { return str.replace(/[\r\t\n\s]/g, '') }
+describe('[ejs]: test for the render method', () => {
+  function format(str) { return str.replace(/[\r\t\n\s]/g, '') }
 
-const case1 = `
-<% if (user) { %>
-  <h2><%= user.name %></h2>
-<% } %>
-`
+  test('render simple html snippet', () => {
+    const template = '<% if (user) { %><h2><%= user.name %></h2><% } %>'
+    const data = {
+      user: { name: 'zhangzhao' },
+    }
 
-const result1 = tejs.render(case1, {
-  user: { name: 'zhangzhao' },
+    const result = render(template, data)
+    expect(format(result)).toBe('<h2>zhangzhao</h2>')
+  })
+
+  test('render complex html snippet with array forEach loop', () => {
+    const template = `
+      <ul>
+        <% users.forEach(function(user){ %>
+          <% if (user) { %>
+            <h2><%= user.name %></h2>
+          <% } %>
+        <% }); %>
+      </ul>
+    `
+    const data = {
+      users: [
+        { name: 'zhao.zhang' },
+        { name: 'lingli.chen' },
+      ],
+    }
+
+    const result = render(template, data)
+    expect(format(result)).toBe('<ul><h2>zhao.zhang</h2><h2>lingli.chen</h2></ul>')
+  })
 })
 
-assert.equal(format(result1), '<h2>zhangzhao</h2>')
-
-const case2 = `
-<ul>
-  <% users.forEach(function(user){ %>
-    <% if (user) { %>
-      <h2><%= user.name %></h2>
-    <% } %>
-  <% }); %>
-</ul>
-`
-
-const result2 = tejs.render(case2, {
-  users: [
-    { name: 'zhao.zhang' },
-    { name: 'lingli.chen' },
-  ],
+describe('[ejs]: test for the parse method', () => {
+  test('parse method will receive a string and return a string', () => {
+    const template = 'Hello World'
+    expect(typeof parse(template)).toBe('string')
+  })
 })
 
-assert.equal(format(result2), '<ul><h2>zhao.zhang</h2><h2>lingli.chen</h2></ul>')
-
-console.log('all test passed')
+describe('[ejs]: test for the compile method', () => {
+  const template = 'Hello World'
+  test('compile method will string and return a function', () => {
+    expect(typeof compile(template)).toBe('function')
+  })
+})
