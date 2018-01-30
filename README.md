@@ -12,6 +12,8 @@ If you think this project is helpful to you or want to support me to continue. Y
 
 <a href="https://david-dm.org/loatheb/tiny-all-over-the-world"><img src="https://david-dm.org/loatheb/tiny-all-over-the-world.svg" alt="Dependency Status"></a>
 <a href="https://david-dm.org/loatheb/tiny-all-over-the-world/?type=dev"><img src="https://david-dm.org/loatheb/tiny-all-over-the-world/dev-status.svg" alt="devDependency Status"></a>
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+
 ## FAQ
 
 ### What's the meaning of non-based?
@@ -34,8 +36,9 @@ Actually, my anwser is anywhere. The purpose of this project is to allow you to 
 
 ## Contributors
 
-| [<img src="https://avatars1.githubusercontent.com/u/18140164?s=460&v=4" width="100px;"/><br /><sub><b>zhao.zhang</b></sub>](https://github.com/loatheb) | [<img src="https://avatars2.githubusercontent.com/u/13282699?s=460&amp;v=4" width="100px;"/><br /><sub><b>Chang Yan</b></sub>](https://github.com/cyan33) |
-| :---: | :---: |
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Buy Me Coffee
 
