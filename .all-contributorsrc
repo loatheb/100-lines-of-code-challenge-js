@@ -1,0 +1,29 @@
+{
+  "projectName": "tiny-all-over-the-world",
+  "projectOwner": "loatheb",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "loatheb",
+      "name": "zhao.zhang",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18140164?v=4",
+      "profile": "https://zhangzhao.name",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "cyan33",
+      "name": "Chang Yan",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13282699?v=4",
+      "profile": "http://cyan33.github.io",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
