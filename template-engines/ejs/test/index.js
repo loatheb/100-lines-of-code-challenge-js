@@ -1,6 +1,6 @@
 const { render } = require('..')
 
-describe('[ejs]: test for the render scope', () => {
+describe('[ejs]: test for the render method', () => {
   function format(str) { return str.replace(/[\r\t\n\s]/g, '') }
 
   test('render simple html snippet', () => {
