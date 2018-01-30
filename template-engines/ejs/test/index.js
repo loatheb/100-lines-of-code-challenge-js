@@ -1,8 +1,8 @@
 const { render } = require('..')
 
-function format(str) { return str.replace(/[\r\t\n\s]/g, '') }
-
 describe('[ejs]: test for the render scope', () => {
+  function format(str) { return str.replace(/[\r\t\n\s]/g, '') }
+
   test('render simple html snippet', () => {
     const template = '<% if (user) { %><h2><%= user.name %></h2><% } %>'
     const data = {
