@@ -2,7 +2,7 @@
   "eslint.autoFixOnSave": true,
   "files.associations": {
     ".lintstagedrc": "yaml",
-    ".all-contributorsrc": "javascript"
+    ".all-contributorsrc": "json"
   },
   "files.exclude": {
     "**/.git": true,
