@@ -4,6 +4,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "lint": "eslint *.js **/*.js",
+    "test": "jest",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
