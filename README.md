@@ -4,6 +4,8 @@
 
 # Tiny All Over The World
 
+[中文文档](https://github.com/loatheb/tiny-all-over-the-world/blob/master/README.ZH-CN.md)
+
 What I want to do is to achieve the simple and tiny version of the most Front-End frameworks and libraries with non-based. In the process of implementation to understand the core principles of them.
 
 Feel free to [create an issue](https://github.com/loatheb/tiny-all-over-the-world/issues), [report bugs](https://github.com/loatheb/tiny-all-over-the-world/issues), [discussion](https://github.com/loatheb/tiny-all-over-the-world/issues) or [create a Pull Request](https://github.com/loatheb/tiny-all-over-the-world/pulls).
