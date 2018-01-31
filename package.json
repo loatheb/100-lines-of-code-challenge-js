@@ -1,5 +1,6 @@
 {
   "private": true,
+  "license": "LGPL-3.0",
   "author": "zhao.zhang <loatheb.zhao@gmail.com>",
   "scripts": {
     "precommit": "lint-staged",
@@ -8,7 +9,6 @@
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
-  "license": "LGPL-3.0",
   "devDependencies": {
     "all-contributors-cli": "^4.10.1",
     "eslint": "^4.16.0",

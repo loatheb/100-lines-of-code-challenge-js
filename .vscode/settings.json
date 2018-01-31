@@ -1,5 +1,9 @@
 {
   "eslint.autoFixOnSave": true,
+  "files.associations": {
+    ".lintstagedrc": "yaml",
+    ".all-contributorsrc": "javascript"
+  },
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
