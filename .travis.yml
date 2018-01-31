@@ -1,6 +1,10 @@
 notifications:
   email: false
 
+cache:
+  directories:
+    - node_modules
+
 language: node_js
 
 node_js:
@@ -8,8 +12,8 @@ node_js:
   - "8"
   - "9"
 
-install:
-  - npm install
-
 script:
-  - npm run contributors:generate
+  - yarn test
+
+after_success:
+  - yarn contributors:generate && ./.deploy/readme.sh

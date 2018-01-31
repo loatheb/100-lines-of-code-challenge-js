@@ -10,19 +10,23 @@ Feel free to [create an issue](https://github.com/loatheb/tiny-all-over-the-worl
 
 If you think this project is helpful to you or want to support me to continue. You can donate through the [following ways](#buy-me-coffee).
 
-<a href="https://david-dm.org/loatheb/tiny-all-over-the-world"><img src="https://david-dm.org/loatheb/tiny-all-over-the-world.svg" alt="Dependency Status"></a>
-<a href="https://david-dm.org/loatheb/tiny-all-over-the-world/?type=dev"><img src="https://david-dm.org/loatheb/tiny-all-over-the-world/dev-status.svg" alt="devDependency Status"></a>
+[![Build Status](https://travis-ci.org/loatheb/tiny-all-over-the-world.svg?branch=master)](https://travis-ci.org/loatheb/tiny-all-over-the-world)
+[![Dependency Status](https://david-dm.org/loatheb/tiny-all-over-the-world.svg)](https://david-dm.org/loatheb/tiny-all-over-the-world)
+[![devDependency Status](https://david-dm.org/loatheb/tiny-all-over-the-world/dev-status.svg)](https://david-dm.org/loatheb/tiny-all-over-the-world/?type=dev)
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+[![platform](https://img.shields.io/badge/platform-osx-yellowgreen.svg)](https://img.shields.io/badge/platform-osx-yellowgreen.svg)
 
 ## FAQ
 
-### What's the meaning of non-based?
+### What's the meaning of non-based
 
-In another word, **non-based** equals to **each project has no dependencies package from npm**.
+In another word, **non-based** equals to **each project has no dependencies package from third party**.
 
-At the beginning of looking other people's code, I often meet some packages that I don't even used or heard before. Because I need to keep looking at what the author did with this package, Then I need a brief look at the usage of this package. That really slowly my enthusiasm. I admit that the node package management is indeed a rich variety, but in the learning process need to add more learning costs. So in this project, each item does not have any third-party dependencies, all of the code in their own scope, which can be more convenient to learn.
+At the beginning of looking other people's code, I often meet some packages that I don't even used or heard before. In order to keep looking at what the author did, I must need a brief look at the usage of this package. That really slowly my enthusiasm. I admit that the node package management is indeed a rich variety, but in the learning process need to add more learning costs.
 
-### Can I use it in production?
+So in this project, each tiny project doesn't have any third-party dependencies, all of the code in their own scope which can be more convenient to review and learn.
+
+### Can I use it in production
 
 No, you can't.
 
@@ -30,7 +34,7 @@ Most open source projects are filled with a lot of [Glue Code](https://en.wikipe
 
 In the actual production environment, you may need to encapsulate according to different business scenarios. If you have the ability to distinguish between right and wrong, then you can re-package based on this project and use, if not, then my answer is **The Best Do Not Use**, only use it as a learning communication tool.
 
-### I really like this project, where should I start?
+### I really like this project, where should I start
 
 Actually, my anwser is anywhere. The purpose of this project is to allow you to understand the internal implementation of some of the frameworks you are using every day. They are not dependent on each other, each framework or library is an independent entity, you can choose your favorite or your interested in and start.
 
@@ -38,8 +42,6 @@ Actually, my anwser is anywhere. The purpose of this project is to allow you to 
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/18140164?v=4" width="100px;"/><br /><sub><b>zhao.zhang</b></sub>](https://zhangzhao.name)<br />[💻](https://github.com/loatheb/tiny-all-over-the-world/commits?author=loatheb "Code") | [<img src="https://avatars1.githubusercontent.com/u/13282699?v=4" width="100px;"/><br /><sub><b>Chang Yan</b></sub>](http://cyan33.github.io)<br />[💻](https://github.com/loatheb/tiny-all-over-the-world/commits?author=cyan33 "Code") |
-| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Buy Me Coffee
