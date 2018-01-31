@@ -7,13 +7,7 @@ cache:
 
 language: node_js
 
-node_js:
-  - "6"
-  - "8"
-  - "9"
+node_js: stable
 
 script:
   - yarn test
-
-after_success:
-  - yarn contributors:generate && ./.deploy/readme.sh
