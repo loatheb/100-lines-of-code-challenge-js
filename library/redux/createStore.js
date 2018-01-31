@@ -8,7 +8,7 @@ module.exports = function createStore(reducer) {
 
   function dispatch(action) {
     state = reducer(state, action)
-    if (listener && typeof listener === 'function') {
+    if (listener) {
       listener()
     }
     return action
