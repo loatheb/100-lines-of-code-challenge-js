@@ -42,6 +42,8 @@ Actually, my anwser is anywhere. The purpose of this project is to allow you to 
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
+| [<img src="https://avatars1.githubusercontent.com/u/18140164?v=4" width="100px;"/><br /><sub><b>zhao.zhang</b></sub>](https://zhangzhao.name)<br />[💻](https://github.com/loatheb/tiny-all-over-the-world/commits?author=loatheb "Code") [📖](https://github.com/loatheb/tiny-all-over-the-world/commits?author=loatheb "Documentation") [⚠️](https://github.com/loatheb/tiny-all-over-the-world/commits?author=loatheb "Tests") | [<img src="https://avatars1.githubusercontent.com/u/13282699?v=4" width="100px;"/><br /><sub><b>Chang Yan</b></sub>](http://cyan33.github.io)<br />[💻](https://github.com/loatheb/tiny-all-over-the-world/commits?author=cyan33 "Code") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Buy Me Coffee

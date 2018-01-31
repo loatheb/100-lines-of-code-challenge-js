@@ -13,7 +13,9 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/18140164?v=4",
       "profile": "https://zhangzhao.name",
       "contributions": [
-        "code"
+        "code",
+        "doc",
+        "test"
       ]
     },
     {
