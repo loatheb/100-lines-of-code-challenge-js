@@ -1,0 +1,8 @@
+html
+  head
+    title tPug
+  body
+    h1 Hello World!
+    ul
+      li zhang.zhao
+      li lingli.chen
